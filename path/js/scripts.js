@@ -1077,16 +1077,21 @@ $(document).ready(function() {
 	  //alert('2-1.1->2-1.2 no anim');
     //Deactivate animation and tooltip
     $('#tip_p02s01-1').toggleClass('active inactive');
-	$('#anim_p02s01-1').toggleClass('inactive active');
-// Trigger animation
-  anim_p2_s1_1 = init_anim('anim_p02s01-1' , '../bodymovin/p02s01/data.json');
+	$('#anim_p02s01-2').toggleClass('inactive active');
+	// Trigger animation
+	anim_p2_s1_2 = init_anim('anim_p02s01-2', '../bodymovin/p02s01/data.json');
+	// anim_p2_s1_1 = init_anim('anim_p02s01-1' , '../bodymovin/p02s01/data.json');
     //Activate animation and tooltip
     setTimeout( function() { $('#tip_p02s01-2').toggleClass('inactive active'); }, 1000);
     $('#anim_p02s01-1').toggleClass('inactive active');
-    setTimeout( function() { anim_p2_s1_1.play(); }, 180);
-    anim_p2_s1_1.addEventListener('loopComplete', function() {
-    anim_p2_s1_1.goToAndStop(100, true);
-    }, false);
+        setTimeout( function() { anim_p2_s1_2.play(); }, 100);
+    anim_p2_s1_2.addEventListener('loopComplete', function() {
+    anim_p2_s1_2.goToAndStop(50, true);
+    }, false); 
+    // setTimeout( function() { anim_p2_s1_2.play(); }, 180);
+    // anim_p2_s1_2.addEventListener('loopComplete', function() {
+    // anim_p2_s1_2.goToAndStop(100, true);
+    // }, false);
   });
 	    //Activate animation and tooltip
 /*     setTimeout( function() { anim_p2_s1_1.play(); }, 500);
@@ -1105,15 +1110,12 @@ $(document).ready(function() {
 	 // alert('2-1.2->2-2.1 yes anim');
     //Deactivate tip an animation
     $('#tip_p02s01-2').toggleClass('active inactive');
-    $('#anim_p02s01-1').toggleClass('active inactive');
+    $('#anim_p02s01-2').toggleClass('active inactive');
 	$('#tip_p02s02-1').toggleClass('inactive active'); 
     // Trigger animation
 	$('#anim_p02s02-1').toggleClass('inactive active');
     anim_p2_s2_1 = init_anim('anim_p02s02-1', '../bodymovin/p02s02/01/data.json');
-	
-	
-	
-			setTimeout( function() { anim_p2_s2_1.play(); }, 100);
+	setTimeout( function() { anim_p2_s2_1.play(); }, 100);
 		anim_p2_s2_1.addEventListener('loopComplete', function() {
 		anim_p2_s2_1.goToAndStop(50, true);
 		}, false);	
@@ -1163,7 +1165,7 @@ $(document).ready(function() {
   $('#tip_p02s02-2 .link').on('click', function(){
 	//  alert('p02s02-2 second one');
 	  
-	  	$('#anim_p02s02-2').toggleClass('active inactive');
+  	$('#anim_p02s02-2').toggleClass('active inactive');
     $('#tip_p02s02-2').toggleClass('active inactive');
 	$('#tip_p02s02-3').toggleClass('inactive active');
     //Activate animation and tooltip
@@ -1214,7 +1216,7 @@ $(document).ready(function() {
   $('#tip_p02s02-3 .link').on('click', function(){
 	//  alert('p02s02-3 last one');
 	  
-	  	$('#anim_p02s02-3').toggleClass('active inactive');
+	$('#anim_p02s02-3').toggleClass('active inactive');
     $('#tip_p02s02-3').toggleClass('active inactive');
 	$('#tip_p02s03').toggleClass('inactive active');
     //Activate animation and tooltip
@@ -1266,7 +1268,7 @@ $(document).ready(function() {
 	  	  //alert('p02s03 only one');
 	  
     $('#tip_p02s03').toggleClass('active inactive');
-	  	$('#anim_p02s03').toggleClass('active inactive');
+  	$('#anim_p02s03').toggleClass('active inactive');
 	$('#tip_p02s04-1').toggleClass('inactive active');
     //Activate animation and tooltip
 	$('#anim_p02s04-0').toggleClass('inactive active');
@@ -1277,7 +1279,7 @@ $(document).ready(function() {
     anim_p2_s4_0.addEventListener('loopComplete', function() {
     anim_p2_s4_0.goToAndStop(100, true);
     }, false);
-	  $('#path_02_progress .three').toggleClass('active inactive');
+  	$('#path_02_progress .three').toggleClass('active inactive');
     $('#path_02_progress .four').toggleClass('inactive active');  
 	  
 	  
@@ -1303,7 +1305,7 @@ $(document).ready(function() {
 	  	 // 	  alert('p02s04-1 first');
 	  
     $('#tip_p02s04-1').toggleClass('active inactive');
-	  	$('#anim_p02s04-0').toggleClass('active inactive');
+  	$('#anim_p02s04-0').toggleClass('active inactive');
 	$('#tip_p02s04-2').toggleClass('inactive active');
     //Activate animation and tooltip
 	$('#anim_p02s04-1').toggleClass('inactive active');
@@ -2149,7 +2151,7 @@ $(document).ready(function() {
     $('#tip_p02s02-1').toggleClass('active inactive');
     $('#anim_p02s02-1').toggleClass('active inactive');
         // Trigger animation
-    anim_p2_s1_2 = init_anim('anim_p02s01-2', '../bodymovin/p02s01/data.json');
+	anim_p2_s1_2 = init_anim('anim_p02s01-2', '../bodymovin/p02s01/data.json');
       //Activate animation and tooltip
     setTimeout( function() { $('#tip_p02s01-2').toggleClass('inactive active'); }, 1100);
     $('#anim_p02s01-2').toggleClass('inactive active');
@@ -2794,9 +2796,8 @@ $(document).ready(function() {
       //anim_p1_s6_1.addEventListener('loopComplete', function() {
       //anim_p1_s6_1.goToAndStop(100, true);
       //}, false);
-      }, 1100);
-    });
- 
+    }, 1100);
+  });
 
   //Section 07 - Clicked
   $('#path_03_progress .seven').on('click', function(){
